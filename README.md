@@ -18,8 +18,8 @@ ansible, python3, sshpass
 /etc/ansible/hosts
 
 ## Hosts file entries
-[ansible-group]
-192.168.50.12 ansible_ssh_user=root ansible_ssh_pass=client001
+###[ansible-group]
+###192.168.50.12 ansible_ssh_user=root ansible_ssh_pass=client001
 
 ## Check syntax
 ansible-playbook /etc/ansible/scripts/httpd.yml --syntax-check
