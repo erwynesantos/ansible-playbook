@@ -1,8 +1,10 @@
 # Ansible Notes
+---
 ## Requirements
 ansible, python3, sshpass
+
 ---
-# Cheat Sheet
+## Cheat Sheet
 * ansible -i hosts all -m ping
 * ansible -i hosts all -m ping --limit host2 # ping only host2
 * ansible -i hosts all -m copy -a "src=/root/test_ansible/testfile dest=/tmp/testfile" # Copy the file "testfile" on all hosts in the inventory file 
@@ -12,7 +14,7 @@ ansible, python3, sshpass
 * ansible-playbook -i hosts p4.yml --check # Dry-run p4.yml playbook 
 * ansible-playbook -i hosts p4.yml -k # Run p4.yml playbook with password authentication for all hosts 
 ---
-# Inventory / node definitions
+## Inventory / node definitions
 /etc/ansible/hosts
 
 # Hosts file entries
@@ -26,15 +28,15 @@ ansible-playbook /etc/ansible/scripts/httpd.yml --syntax-check
 ansible-playbook httpd.yml
 ---
 
-# Playbook information
-[create-file-with-perm.yaml](create-file-with-perm.yam)
-[create-multiple-files.yaml
-[del-and-recreate-file.yaml]
-[del-multiple-files.yaml]
-[delete-file.yaml]
-[enable-selinux-httpd.yaml]
-[exec-date-install-httpd.yaml]
-[install-lldpad-package.yaml]
-[install-run-httpd.yaml]
-[mod-dns.yaml]
-[modify-line.yaml]
+## Playbook information
+* [create-file-with-perm.yaml](create-file-with-perm.yam): Creates new file with specified permissions.
+* [create-multiple-files.yaml](create-multiple-files.yaml): Creates multiple files.
+* [del-and-recreate-file.yaml](del-and-recreate-file.yaml): Delete and recreate a file.
+* [del-multiple-files.yaml](del-multiple-files.yaml): Delete multiple files.
+* [delete-file.yaml](delete-file.yaml): Delete a file.
+* [enable-selinux-httpd.yaml](enable-selinux-httpd.yaml): Enables SELinux and installs apache.
+* [exec-date-install-httpd.yaml](exec-date-install-httpd.yaml): Execs date command then installs apache.
+* [install-lldpad-package.yaml](install-lldpad-package.yaml): Installs lldpad.
+* [install-run-httpd.yaml](install-run-httpd.yaml): Install and run apache.
+* [mod-dns.yaml](mod-dns.yaml): DNS resolver modifier.
+* [modify-line.yaml](modify-line.yaml): Modifies a line in a file.
