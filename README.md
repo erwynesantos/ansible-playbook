@@ -21,7 +21,7 @@
 /etc/ansible/hosts
 
 ## Hosts File Entries
-[ansible-group]
+[ansible-group]\
 192.168.50.12 ansible_ssh_user=root ansible_ssh_pass=client001
 
 ## Check Syntax
