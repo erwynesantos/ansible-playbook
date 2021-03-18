@@ -1,0 +1,18 @@
+---
+- name: Delete and Re-Create crunchify.txt file from current directory.
+  hosts: local
+  connection: local
+  gather_facts: True
+ 
+  tasks:
+    - name: delete file
+      ignore_errors: yes
+      file:
+        state: absent
+        path: crunchify.txt
+ 
+    - name: Ansible create file if it doesn't exist example
+      ignore_errors: yes
+      file:
+        path: "crunchify.txt"
+        state: touch

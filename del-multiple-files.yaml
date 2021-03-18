@@ -1,0 +1,9 @@
+---
+- name: Ansible file module to delete multiple files 
+  file:                  
+   path: "{{ item }}"    
+   state: absent  
+  with_items:    
+  - devops1.txt    
+  - devops2.txt    
+  - devops3.txt

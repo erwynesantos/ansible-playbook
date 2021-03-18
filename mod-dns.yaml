@@ -1,0 +1,9 @@
+---
+- name: Set resolver for server
+  template:
+    src: dns.j2
+    dest: /etc/resolv.conf
+    group: root
+    owner: root
+    mode: "0644"
+    tag: resolver

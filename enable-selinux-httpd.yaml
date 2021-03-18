@@ -1,0 +1,21 @@
+# Enable SELinux and install Apache
+---
+- hosts: group1
+  tasks:
+  - name: Enable SELinux
+    selinux:
+      state: enabled
+    when: ansible_os_family == 'Debian'
+    register: enable_selinux
+
+  - debug:
+      Imsg: "Selinux Enabled. Please restart the server to apply changes."
+    when: enable_selinux.changed == true
+
+- hosts: group2
+  tasks:
+  - name: Install apache
+    yum:
+      name: httpd
+      state: present
+    when: ansible_system_vendor == 'HP' and ansible_os_family == 'RedHat'

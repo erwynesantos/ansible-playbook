@@ -1,0 +1,11 @@
+---
+- tasks:  
+- name: Ansible file module to create multiple files    
+  file:       
+   path: "{{ item }}"      
+   state: touch     
+   mode: 0421    
+  with_items:    
+  - devops1.txt    
+  - devops2.txt    
+  - devops3.txt

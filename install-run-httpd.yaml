@@ -1,0 +1,20 @@
+---
+- name: install and run httpd, insert a simple html file
+  hosts: ansible-group
+  vars:
+  		ansible_python_interpreter: /usr/bin/python3
+  remote_user: root
+  become: true
+  tasks:
+   - name: install httpd
+   	 apt:
+   	 	 name: apache2
+   	 	 state: latest
+   - name: run apache2
+     service:
+     		 name: apache2
+     		 state: started
+   - name: create content
+     copy:
+     	  content: "Ansible installed"
+     	  dest: /var/www/html/index.html

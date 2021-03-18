@@ -1,0 +1,8 @@
+--
+- tasks:  
+  - name: Ansible file module to create new file with permissions.    
+    file:      
+    path: /path/to/cretae/file/devops.txt    
+    state: touch      
+    mode: 0421      
+    owner: devops

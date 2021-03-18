@@ -1,0 +1,15 @@
+---
+- hosts: group2
+  tasks:
+  - name: sshd config file modify port
+    lineinfile:
+     path: /etc/ssh/sshd_config
+     regexp: 'Port 28675'
+     line: '#Port 22'
+    notify:
+       - restart sshd
+handlers
+    - name: restart sshd
+      service: sshd
+        name: sshd
+        state: restarted

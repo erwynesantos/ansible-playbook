@@ -1,0 +1,10 @@
+---
+- name: delete file
+  hosts: ansible-group
+  vars:
+  		ansible_python_interpreter: /usr/bin/python3
+  tasks:
+  		- name: delete /tmp/test_file1
+  		  file:
+  		  		path:/tmp/test_file1
+  		  		state: absent
