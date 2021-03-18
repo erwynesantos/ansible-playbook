@@ -34,9 +34,9 @@ ansible-playbook httpd.yml
 ## Playbook Information
 * [create-file-with-perm.yaml](create-file-with-perm.yam): Creates new file with specified permissions.
 * [create-multiple-files.yaml](create-multiple-files.yaml): Creates multiple files.
-* [del-and-recreate-file.yaml](del-and-recreate-file.yaml): Delete and recreate a file.
-* [del-multiple-files.yaml](del-multiple-files.yaml): Delete multiple files.
-* [delete-file.yaml](delete-file.yaml): Delete a file.
+* [del-and-recreate-file.yaml](del-and-recreate-file.yaml): Deletes and recreate a file.
+* [del-multiple-files.yaml](del-multiple-files.yaml): Deletes multiple files.
+* [delete-file.yaml](delete-file.yaml): Deletes a file.
 * [enable-selinux-httpd.yaml](enable-selinux-httpd.yaml): Enables SELinux and installs apache.
 * [exec-date-install-httpd.yaml](exec-date-install-httpd.yaml): Execs date command then installs apache.
 * [install-lldpad-package.yaml](install-lldpad-package.yaml): Installs lldpad.
