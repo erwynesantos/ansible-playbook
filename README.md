@@ -18,16 +18,16 @@ ansible, python3, sshpass
 /etc/ansible/hosts
 
 ## Hosts file entries
-###[ansible-group]
-###192.168.50.12 ansible_ssh_user=root ansible_ssh_pass=client001
+### [ansible-group]
+### 192.168.50.12 ansible_ssh_user=root ansible_ssh_pass=client001
 
 ## Check syntax
 ansible-playbook /etc/ansible/scripts/httpd.yml --syntax-check
 
 ## Push the commands in the playbook to the ansible-group hosts
 ansible-playbook httpd.yml
----
 
+---
 ## Playbook information
 * [create-file-with-perm.yaml](create-file-with-perm.yam): Creates new file with specified permissions.
 * [create-multiple-files.yaml](create-multiple-files.yaml): Creates multiple files.
