@@ -17,14 +17,14 @@ ansible, python3, sshpass
 ## Inventory / node definitions
 /etc/ansible/hosts
 
-# Hosts file entries
+## Hosts file entries
 [ansible-group]
 192.168.50.12 ansible_ssh_user=root ansible_ssh_pass=client001
 
-# Check syntax
+## Check syntax
 ansible-playbook /etc/ansible/scripts/httpd.yml --syntax-check
 
-# Push the commands in the playbook to the ansible-group hosts
+## Push the commands in the playbook to the ansible-group hosts
 ansible-playbook httpd.yml
 ---
 
