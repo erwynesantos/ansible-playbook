@@ -13,22 +13,23 @@ ansible, python3, sshpass
 * ansible-galaxy init role1 # Build the directory structure for role named role1
 * ansible-playbook -i hosts p4.yml --check # Dry-run p4.yml playbook 
 * ansible-playbook -i hosts p4.yml -k # Run p4.yml playbook with password authentication for all hosts 
+
 ---
-## Inventory / node definitions
+## Inventory / Node Definitions
 /etc/ansible/hosts
 
-## Hosts file entries
-"[ansible-group]"
+## Hosts File Entries
+[ansible-group]
 192.168.50.12 ansible_ssh_user=root ansible_ssh_pass=client001
 
-## Check syntax
+## Check Syntax
 ansible-playbook /etc/ansible/scripts/httpd.yml --syntax-check
 
 ## Push the commands in the playbook to the ansible-group hosts
 ansible-playbook httpd.yml
 
 ---
-## Playbook information
+## Playbook Information
 * [create-file-with-perm.yaml](create-file-with-perm.yam): Creates new file with specified permissions.
 * [create-multiple-files.yaml](create-multiple-files.yaml): Creates multiple files.
 * [del-and-recreate-file.yaml](del-and-recreate-file.yaml): Delete and recreate a file.
