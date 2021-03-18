@@ -1,6 +1,5 @@
 # Ansible Notes
 
----
 ## Requirements
 * ansible
 * python3
