@@ -3,14 +3,14 @@
 ansible, python3, sshpass
 ---
 # Cheat Sheet
-ansible -i hosts all -m ping
-ansible -i hosts all -m ping --limit host2 # ping only host2
-ansible -i hosts all -m copy -a "src=/root/test_ansible/testfile dest=/tmp/testfile" # Copy the file "testfile" on all hosts in the inventory file 
-ansible -i hosts all -m yum -a 'name=ncdu state=present' # Install ncdu package on all hosts 
-ansible -i hosts all -m yum -a 'name=ncdu state=absent' # Remove ncdu package on all hosts 
-ansible-galaxy init role1 # Build the directory structure for role named role1
-ansible-playbook -i hosts p4.yml --check # Dry-run p4.yml playbook 
-ansible-playbook -i hosts p4.yml -k # Run p4.yml playbook with password authentication for all hosts 
+* ansible -i hosts all -m ping
+* ansible -i hosts all -m ping --limit host2 # ping only host2
+* ansible -i hosts all -m copy -a "src=/root/test_ansible/testfile dest=/tmp/testfile" # Copy the file "testfile" on all hosts in the inventory file 
+* ansible -i hosts all -m yum -a 'name=ncdu state=present' # Install ncdu package on all hosts 
+* ansible -i hosts all -m yum -a 'name=ncdu state=absent' # Remove ncdu package on all hosts 
+* ansible-galaxy init role1 # Build the directory structure for role named role1
+* ansible-playbook -i hosts p4.yml --check # Dry-run p4.yml playbook 
+* ansible-playbook -i hosts p4.yml -k # Run p4.yml playbook with password authentication for all hosts 
 ---
 # Inventory / node definitions
 /etc/ansible/hosts
