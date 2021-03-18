@@ -1,7 +1,10 @@
 # Ansible Notes
+
 ---
 ## Requirements
-ansible, python3, sshpass
+* ansible
+* python3
+* sshpass
 
 ---
 ## Cheat Sheet
